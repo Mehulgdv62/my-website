@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  
+}
+
+body {
+  background: #000000;
+  background-color: #000000;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #000000;
+  color: #ffc107;
+  padding: 2rem;
+  text-align: center;
+  animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.services-wrapper {
+  bg
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.service-box {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  flex: 1 1 300px;
+  max-width: 340px;
+  padding: 1.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease forwards;
+  border-top: 5px solid #ffc107;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.service-box h3 {
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.service-box p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #ffc107;
+}
+
+@media (max-width: 768px) {
+  .services-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}

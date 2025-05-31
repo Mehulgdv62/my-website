@@ -1,0 +1,150 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Main Wrapper */
+.ab-wrapper {
+  padding: 80px 20px;
+  animation: fadeIn 1.2s ease-in-out;
+  background: linear-gradient(to right, #0f0f0f, #1c1c1c);
+}
+
+/* Container */
+.ab-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Heading */
+.ab-heading {
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideInDown 1s ease-out;
+}
+
+.ab-highlight {
+  color: #e11060;
+}
+
+/* Tagline */
+.ab-tagline {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 50px;
+  font-style: italic;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Content Area */
+.ab-content {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Text Section */
+.ab-text {
+  flex: 1;
+  animation: slideInLeft 1.1s ease;
+}
+
+.ab-text h2 {
+  font-size: 1.8rem;
+  color: #ff4081;
+  margin-bottom: 15px;
+}
+
+.ab-text p {
+  font-size: 1.05rem;
+  color: #cfcfcf;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.ab-text ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.ab-text ul li {
+  color: #f4f4f4;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Image Section */
+.ab-image {
+  flex: 1;
+  animation: slideInRight 1.2s ease-in;
+}
+
+.ab-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(225, 16, 96, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.ab-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(225, 16, 96, 0.7);
+}
+
+/* Animations */
+@keyframes slideInDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ab-heading {
+    font-size: 2.2rem;
+  }
+
+  .ab-content {
+    flex-direction: column;
+  }
+
+  .ab-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .ab-text p, .ab-text ul li {
+    font-size: 0.95rem;
+  }
+}
